@@ -8,7 +8,7 @@ def load_emotion_model():
     """
     Load the emotion prediction model from the .pkl file
     """
-    model_path = os.path.join(os.path.dirname(__file__), 'models', 'emotion_model.pkl')
+    model_path = os.path.join(os.path.dirname(__file__), 'models', 'DecisonTreeModel.pickle')
     try:
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
