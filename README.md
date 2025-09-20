@@ -12,6 +12,8 @@ This project is a Django web application that predicts menstrual cycle length an
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#testing)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
 
