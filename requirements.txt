@@ -6,3 +6,4 @@ seaborn==0.13.2
 scikit-learn==1.7.1
 joblib==1.5.1
 kagglehub
+requests==2.31.0

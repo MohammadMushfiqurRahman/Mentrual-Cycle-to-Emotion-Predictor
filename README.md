@@ -4,6 +4,7 @@ This project is a Django web application that predicts menstrual cycle length an
 
 ## Table of Contents
 - [Project Overview](#project-overview)
+- [Motivation](#motivation)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Models](#models)
@@ -14,12 +15,17 @@ This project is a Django web application that predicts menstrual cycle length an
 - [Usage](#usage)
 - [Testing](#testing)
 - [Deployment](#deployment)
+- [Future Work](#future-work)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Project Overview
 
 This project combines a machine learning model with a web interface to provide predictions related to the menstrual cycle. The backend is built with Django, and the machine learning models are built using scikit-learn.
+
+## Motivation
+
+*(Please add a brief description of the problem this project solves or the motivation behind creating it.)*
 
 ## Features
 
@@ -57,6 +63,8 @@ The project uses the following pre-trained machine learning models:
 -   **`emotion_model.pkl`:** A model for emotion prediction.
 -   **`saved_model.sav`:** Another model for cycle length prediction (likely a different algorithm).
 
+*(Please update this section with more details about the models, such as the features used, the target variables, and the model performance metrics like accuracy, F1-score, etc.)*
+
 These models are stored in the `predictor/models/` directory.
 
 ## Dataset
@@ -74,6 +82,7 @@ The `Menstrual_cycle_length_prediction.ipynb` notebook contains the code for dow
 
 -   Python 3.10 or later
 -   pip
+-   Kaggle API Key
 
 ### Installation
 
@@ -113,10 +122,67 @@ The `Menstrual_cycle_length_prediction.ipynb` notebook contains the code for dow
 
 3.  Open your web browser and go to `http://127.0.0.1:8000/` to use the application.
 
+## Testing
+
+To run the tests, you need to have the Django development server running.
+
+1.  **Run the Django development server:**
+    ```bash
+    python manage.py runserver
+    ```
+
+2.  **Open a new terminal and run the test scripts:**
+    ```bash
+    python test_frontend.py
+    python test_predictor.py
+    ```
+
+## Deployment
+
+This is a standard Django application and can be deployed to any platform that supports Python and Django. Here are some general steps for deployment:
+
+1.  **Choose a hosting provider:** Heroku, PythonAnywhere, AWS, Google Cloud, etc.
+2.  **Configure your `settings.py` for production:**
+    -   Set `DEBUG = False`.
+    -   Configure `ALLOWED_HOSTS` with your domain name.
+    -   Use a production-ready database like PostgreSQL.
+3.  **Set up a production-ready web server:** Use a web server like Gunicorn or uWSGI to serve your application.
+4.  **Serve static files:** Configure a service like Whitenoise or use a separate web server like Nginx to serve your static files.
+
+For detailed instructions, please refer to the Django deployment documentation.
+
+## Future Work
+
+*(Please add any ideas for future improvements to the project, such as adding new features, improving the models, or supporting more languages.)*
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue.
 
 ## License
 
-This project is unlicensed. You are free to use, modify, and distribute the code. However, it is provided "as is" without any warranty. Consider adding an open-source license like MIT if you want to encourage collaboration.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+MIT License
+
+Copyright (c) 2025 [Your Name]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify,merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
